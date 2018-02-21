@@ -6,8 +6,8 @@ var app = express();
 
 //additions ?
 
-// var connection = require("./config/connection.js");
-var db = require("./models");
+var connection = require("./config/connection.js");
+// var db = require("./models");
 
 //serve static contnet for the app from public directory
 app.use(express.static("public"));
@@ -28,12 +28,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //import routes
-var routes = require("./controllers/burgers_controller.js");
+// var routes = require("./controllers/burgers_controller.js");
 
-app.use(routes);
+// app.use(routes);
 
-db.sequelize.sync().then(function(){
+// db.sequelize.sync().then(function(){
 app.listen(PORT, function(){
     console.log("App listening at port: " + PORT);
 })
-});
+// });
