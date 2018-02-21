@@ -1,6 +1,8 @@
 var express = require ("express");
 var router = express.Router();
-var burger = require("../models/burger.js");
+//took out below as need both models?
+// var burger = require("../models/burger.js");
+var burger = require("../models");
 
 router.get("/", function(req,res) {
     burger.selectAll(function(data){

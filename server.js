@@ -27,13 +27,13 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//import routes
-// var routes = require("./controllers/burgers_controller.js");
+//import routes this then creates table in the sequelize_burgers database I already created
+var routes = require("./controllers/burgers_controller.js");
 
-// app.use(routes);
+app.use(routes);
 
-// db.sequelize.sync().then(function(){
+burger.sequelize.sync().then(function(){
 app.listen(PORT, function(){
     console.log("App listening at port: " + PORT);
 })
-// });
+});
