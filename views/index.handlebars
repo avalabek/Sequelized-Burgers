@@ -1,0 +1,115 @@
+
+<br>
+<h1>Devouring Burgers</h1>
+<div class=container>
+  <div class=row>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+    <br>
+    <br>      <br><br>
+    <h2>Burgers you have eaten.</h2>
+
+      <ul style="list-style-type:none">
+        {{#each burgers}} 
+          {{#if devoured}}
+        <li>
+          {{!-- {{id}}  --}}
+            {{burger_name}}
+        </li>
+          {{/if}} 
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-3">
+    <br><br><br><br>
+    
+    <h2>Burgers you haven't eaten.</h2>
+      <ul style="list-style-type:none">
+        {{#each burgers}} 
+          {{#unless devoured}}
+          <li>
+            {{!-- {{this.id}} --}}
+
+                        {{burger_name}} 
+            <button type="button" class="btn-sm change-devoured btn-fushia" data-id="{{id}}" data-newdevoured="{{devoured}}">
+            {{#if devoured}}That was good! {{else}}Eat.{{/if}}
+        </button> 
+    </li>
+
+  
+    {{/unless}} 
+    {{/each}}
+</ul>
+</div>
+
+
+    </div>
+    
+    
+
+<div class=row>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3">
+  
+<h2>Add a burger.</h2>
+
+<form class="create-form">
+
+    <div class="form-group">
+        
+        <input type="text" id="ca" name="burger_name">
+        <button class="btn btn-sm btn-burger" type="submit">Submit</button>
+    </div>
+<div class="col-sm-12">
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="devoured" value="1" checked>Devoured!
+    </label>
+    <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="devoured" value="0">To savour later...
+  </label>
+</div>
+
+
+    {{!-- <div class="form-group">
+        
+        
+        <input type="radio" name="devoured" value="1" checked> Devoured!
+        <br>
+        <input type="radio" name="devoured" value="0"> To be later savoured...
+    </div> --}}
+
+    
+</form>
+</div>
+</div>
+<!--Footer-->
+<footer class="page-footer blue center-on-small-only">
+
+  <!--Footer Links-->
+  <div class="container-fluid">
+    
+  <br><br>
+  <!--Copyright-->
+  <div class="footer-copyright">
+    
+    <div class="container-fluid mainFont">
+      <br><br><br><br>
+      <br>
+      <br>
+      <a href="https://github.com/avalabek/Burgers" target="_blank">
+        <i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/andreya-valabek/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+   © 2018 Andreya Valabek
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  </div>
+  </footer>
+  
+  

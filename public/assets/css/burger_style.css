@@ -1,0 +1,167 @@
+/* font-family: 'Quicksand',
+sans-serif;
+font-family: 'Amatic SC',
+cursive;
+font-family: 'Comfortaa',
+cursive;
+font-family: 'Rajdhani',
+sans-serif;
+font-family: 'Poiret One',
+cursive; */
+.mainFont{
+    font-family: 'Poiret One',
+    cursive;
+    font-size: 22px;
+    text-align: left;
+    font-weight:bold;
+}
+body{
+    text-align:center;
+    
+    
+    background-color: #11314b; 
+}
+.color{
+    background-color: green;
+}
+h1{
+    font-family: 'Monoton',
+    cursive;
+    font-size:80px;
+    font-weight:lighter;
+    
+}
+h2{
+   font-family: 'Poiret One',
+   cursive;
+    font-size: 35px;
+    font-weight:bold; 
+    word-wrap: break-word;
+    text-align:center;
+}
+ul {
+    text-align:left;
+
+}
+li {
+    font-family: 'Scope One',
+    cursive;
+    font-size:20px;
+    padding: 5px;
+    margin: 5px;
+    background-color:transparent;
+    /* background: #61a4be; */
+    text-align:left;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    background-color:transparent;
+}
+#ca {
+    background-color: rgb(173, 165, 167);
+}
+.change-devoured {
+    background-color:rgb(92, 74, 54);
+}
+.btn-burger {
+    color: #ffffff;
+    background-color: #128216;
+    border-color: #128216;
+}
+/* the below isn't working: why? */
+.btn-burger:hover,
+.btn-burger:focus,
+.btn-burger:active,
+.btn-burger.active,
+.open .dropdown-toggle.btn-burger {
+    color: #ffffff;
+    background-color: #824E12;
+    border-color: #128216;
+}
+
+.btn-burger:active,
+.btn-burger.active,
+.open .dropdown-toggle.btn-burger {
+    background-image: none;
+}
+
+.btn-burger.disabled,
+.btn-burger[disabled],
+fieldset[disabled] .btn-burger,
+.btn-burger.disabled:hover,
+.btn-burger[disabled]:hover,
+fieldset[disabled] .btn-burger:hover,
+.btn-burger.disabled:focus,
+.btn-burger[disabled]:focus,
+fieldset[disabled] .btn-burger:focus,
+.btn-burger.disabled:active,
+.btn-burger[disabled]:active,
+fieldset[disabled] .btn-burger:active,
+.btn-burger.disabled.active,
+.btn-burger[disabled].active,
+fieldset[disabled] .btn-burger.active {
+    background-color: #128216;
+    border-color: #128216;
+}
+
+.btn-burger .badge {
+    color: #128216;
+    background-color: #ffffff;
+}
+/* fushia button*/
+.btn-fushia {
+    color: #ffffff;
+    background-color: #821246;
+    border-color: #130269;
+}
+
+.btn-fushia:hover,
+.btn-fushia:focus,
+.btn-fushia:active,
+.btn-fushia.active,
+.open .dropdown-toggle.btn-fushia {
+    color: #ffffff;
+    background-color: #49247A;
+    border-color: #130269;
+}
+
+.btn-fushia:active,
+.btn-fushia.active,
+.open .dropdown-toggle.btn-fushia {
+    background-image: none;
+}
+
+.btn-fushia.disabled,
+.btn-fushia[disabled],
+fieldset[disabled] .btn-fushia,
+.btn-fushia.disabled:hover,
+.btn-fushia[disabled]:hover,
+fieldset[disabled] .btn-fushia:hover,
+.btn-fushia.disabled:focus,
+.btn-fushia[disabled]:focus,
+fieldset[disabled] .btn-fushia:focus,
+.btn-fushia.disabled:active,
+.btn-fushia[disabled]:active,
+fieldset[disabled] .btn-fushia:active,
+.btn-fushia.disabled.active,
+.btn-fushia[disabled].active,
+fieldset[disabled] .btn-fushia.active {
+    background-color: #821246;
+    border-color: #130269;
+}
+
+.btn-fushia .badge {
+    color: #821246;
+    background-color: #ffffff;
+}
