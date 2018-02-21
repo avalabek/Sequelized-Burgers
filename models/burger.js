@@ -21,7 +21,7 @@ var Burgers = sequelize.define("Burgers",{
         type: Sequelize.BOOLEAN,
         defaultValue: false
    }   },{
-    timestamps:false
+timestamps:false
    }
     
 );
