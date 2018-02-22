@@ -8,6 +8,12 @@ db.sequelize.sync();
 var PORT = process.env.PORT || 3000;
 var app = express();
 
+//afternoon changes this exists in burgers_controller but may belong here
+var router = express.Router();
+
+
+
+
 //additions ?
 
 var connection = require("./config/connection.js");
@@ -32,12 +38,16 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //import routes this then creates table in the sequelize_burgers database I already created
-var routes = require("./controllers/burgers_controller.js");
+//below 3:43 pm
+// var routes = require("./controllers/burgers_controller.js");
 
-app.use(routes);
+// app.use(routes);
+require("./controllers/burgers_controller.js")(router);
+app.use("/",router)
 
 // db.sequelize.sync({force: true }).then(function(){
 app.listen(PORT, function(){
     console.log("App listening at port: " + PORT);
 })
 //  });
+module.exports = app;
