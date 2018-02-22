@@ -1,5 +1,6 @@
+//initialize Sequelize
 var Sequelize = require("sequelize");
-
+//the sequelize instance, no caps
 var sequelize = new Sequelize
 ("sequelize_burgers", "root", "root",{
    

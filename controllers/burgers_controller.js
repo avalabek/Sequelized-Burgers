@@ -15,6 +15,13 @@ router.get("/", function(req,res) {
         res.render("index", hbsObject);
     });
 });
+// GET route for getting all of the todos
+  router.get("/api/burgers", function(req, res) {
+    // Add a Sequelize findAll method inside the GET route which finds all of the todos and returns them to the user as JSON.
+    db.Burger.findAll().then(function(results) {
+      res.json(results);
+    });
+  });
 router.post("/api/burgers", function(req, res) {
     db.Burgers.create({
         burger_name: req.body.burger_name,
