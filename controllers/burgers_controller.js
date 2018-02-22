@@ -5,8 +5,9 @@ var router = express.Router();
 var db = require("../models");
 // wrap in function for export
 module.exports = function(router){
+
 router.get("/", function(req,res) {
-    db.Burgers.findAll(function(data){
+    db.Burgers.findAll().then(function(data){
     // burger.all(function(data) {
         var hbsObject = {
             burgers: data
