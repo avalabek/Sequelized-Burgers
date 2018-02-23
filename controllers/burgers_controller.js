@@ -16,9 +16,9 @@ router.get("/", function(req,res) {
         res.render("index", hbsObject);
     });
 });
-// GET route for getting all of the todos
+
   router.get("/api/burgers", function(req, res) {
-    // Add a Sequelize findAll method inside the GET route which finds all of the todos and returns them to the user as JSON.
+    
     db.Burgers.findAll().then(function(results) {
       res.json(results);
     });
@@ -29,6 +29,7 @@ router.post("/api/burgers", function(req, res) {
         devoured:  req.body.devoured
     }).then(function(result){
         res.json({id:result.insertID});
+        console.log(req.body.burger_name);
     })
     // burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
     //send back the id of the new burger
@@ -41,7 +42,7 @@ router.put("/api/burgers/:id", function(req, res) {
    db.Burgers.update({
        devoured: true
    },{
-       where: {id: req.params.id}
+     where: {id: req.params.id}
    }).then(function(results){
        res.send(results);
    });
